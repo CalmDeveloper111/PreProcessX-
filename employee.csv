@@ -1,0 +1,30 @@
+Education,JoiningYear,City,PaymentTier,Age,Gender,EverBenched,ExperienceInCurrentDomain,LeaveOrNot
+,2017,Bangalore,,34,Male,,0,0
+,2013,Pune,1,28,Female,No,3,1
+,2014,New Delhi,,38,Female,No,2,0
+Masters,2016,Bangalore,3,27,,No,5,
+,2017,Pune,3,24,Male,Yes,2,1
+,2016,Bangalore,3,22,Male,No,0,0
+Bachelors,2015,New Delhi,3,38,Male,No,0,0
+,2016,Bangalore,3,34,Female,No,,1
+,2016,Pune,,23,Male,No,1,0
+,2017,New Delhi,2,37,Male,No,2,0
+,2012,Bangalore,3,27,Male,No,5,1
+Bachelors,2016,Pune,3,34,Male,No,3,
+,2018,Pune,3,32,Male,,5,
+,2016,Bangalore,3,39,Male,No,2,
+Bachelors,2012,Bangalore,3,37,Male,No,4,0
+,2017,Bangalore,1,29,Male,No,3,0
+Bachelors,2014,Bangalore,3,34,Female,No,2,0
+,2014,Pune,3,34,Male,,4,0
+,2015,Pune,2,30,Female,No,0,1
+Bachelors,2016,New Delhi,,22,Female,No,0,1
+Bachelors,2012,Bangalore,3,37,Male,,0,0
+Masters,2017,New Delhi,2,28,Male,No,4,
+Bachelors,2017,New Delhi,2,36,Male,No,3,0
+,2015,Bangalore,,27,Male,Yes,5,0
+Bachelors,2017,Bangalore,3,29,Male,No,,
+Bachelors,2013,Bangalore,3,22,,Yes,0,0
+,2016,Bangalore,3,37,Male,,2,0
+Bachelors,2015,Bangalore,,23,Male,No,1,0
+,2013,Pune,2,31,Female,,2,1

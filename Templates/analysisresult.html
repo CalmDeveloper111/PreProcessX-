@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>analysis_result</title>
+    <style>
+        table{
+            width: fit-content;
+            border-collapse: collapse;
+        }
+        table ,th ,td {
+            margin: 5px;
+            border: 1px solid black;
+        }
+        th,td{
+            padding: 8px;
+            text-align: center;
+        }
+
+        th{
+            background-color: antiquewhite;
+            /* display: flex; */
+            /* flex-direction: None; */
+            /* position: fixed; */
+        }
+
+        button {
+
+        }
+        
+        .before_after{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin : 0% 0% 0 32 ;
+        }
+
+        h1{
+            display: inline;
+        }
+        
+        .inner_divs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main_container {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        #Full_processed_data {
+            height: 98vh;
+            width: auto;
+            overflow: scroll;
+        }
+
+        #inner_div_2 {
+            margin-top: 15%;
+        }
+
+
+        #pie_img {
+            width: 30rem;
+            height: auto;
+            margin-left: 0%;
+        }
+
+        #pie_chart{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="main_container">
+    <!-- <a href="#"><button>Processed Data</button> </a> -->
+    <div id="Full_processed_data" ><h1>Processed Data :- </h1>{{result_full|safe}}</div>
+
+    
+
+
+
+    <!-- <pre><p><h1>No of missing values before imputation</h1>           <h1>No of missing values within columns after imputation</h1></p></pre> -->
+<div class="before_after">
+    <div class="inner_divs" id="inner_div_1"><h3>No of missing values before imputation</h3>{{result_counts_before|safe}} </div>
+
+    
+     
+    <div class="inner_divs" id="inner_div_2"><h3>No of missing values after imputation</h3>{{result_counts_after|safe}} </div>
+
+    </div>
+
+
+    <div id="pie_chart">
+         <h3>Portion of missing values</h3>
+        <img id="pie_img" src="data:img/png;base64,{{pie_chart}}" alt="">
+
+    </div>
+
+</div>
+</body>
+</html>

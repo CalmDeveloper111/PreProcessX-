@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #222245;
+        }
+
+        #main_container{
+            height: 40vh;
+            width: 40vw;
+            background-color: #667177;
+            margin: 20vh 30vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #sub_container{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #datasets_btn{
+            margin-left : 10px ;
+        }
+
+        h1{
+            background-color: beige;
+        }
+        img{
+            height: 50%;
+            width: 50%;
+            /* margin: 0 25%; */
+        }
+        #file_button{
+            height: 200px;
+        }
+
+
+        .drpdn_content{
+            display: none;
+        }
+
+        .drpdn:hover .drpdn_content{
+            display: block;
+        }
+
+        .drpdn_content a{
+            display: block;
+            background-color: none;
+            text-decoration: none;
+            color: black;
+            height: 50px;
+        }
+
+        .drpdn{
+            position: fixed;
+        }
+
+        #drpdn{
+            color: black;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- <h1>this is index page</h1> -->
+    <div id="main_container">
+      <h2>DATA PREPROCESSING MADE EASY </h2>
+        
+        <div id="sub_container">
+           <ul> <div class="drpdn">
+            <div id="drpdn"><button>Datasets</button></div>
+        <div class="drpdn_content">
+
+            {%for i in data %}
+            <a href="{% url 'dataset' i.id %}">{{i.name}}</a>
+            
+            
+            {% endfor %}
+        </div> </div></ul> 
+        <div>
+
+            <img  src="https://th.bing.com/th/id/OIP.Ww5FrLrAIuZlkajemI-qygHaHa?rs=1&pid=ImgDetMain" alt="DATA IMG"> <br><br>
+        
+        </div></div>
+
+
+        <form action="upload" method="post" enctype="multipart/form-data"> {% csrf_token %}
+            <input id="file_button" type="file" name='file'>
+
+            <!-- radio buttons -->
+             {% comment %} <input type="radio"> {% endcomment %}
+
+            <input id="submit_button" type="submit" name="button" >
+        </form>
+    </div>
+</body>
+</html>
